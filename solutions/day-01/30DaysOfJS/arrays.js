@@ -129,3 +129,41 @@
     
     webTechs.sort()
     console.log(webTechs) // ["CSS", "HTML", "JavaScript", "MongoDB", "Node", "React", "Redux"]
+
+//Looping
+    //For Of
+        //The for of loop is very handy to use it with array. If we are not interested in the index of the array a for of loop is preferable to regular for loop or forEach loop.
+        const numbies =  [1, 2, 3, 4, 5]
+        for (let numby of numbies) {
+            console.log(numby)
+        }
+
+        //or
+        const countries = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+        for(const country of countries) {
+            console.log(country)
+        }
+
+    //forEach
+    //v different - this is a method of the array itself
+    //Used when we want to use index (can also just use basic for loop)
+    numbies.forEach((number, i) => {
+        console.log(number)
+    })
+    //not used to this sort of convention, esp =>
+
+
+//Last Loop
+//for in
+//Used for object literals - using keys
+const user = {
+    firstName: 'Asabeneh',
+    lastName: 'Yetayeh',
+    age: 250,
+    country: 'Finland',
+    skills: ['HTML', 'CSS', 'JS', 'React', 'Node', 'Python', 'D3.js'],
+  }
+  
+  for (const key in user) {
+    console.log(key, user[key])
+  }
