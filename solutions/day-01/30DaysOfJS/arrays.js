@@ -4,7 +4,7 @@
 //const and let have block scope
 
 //CREATION
-    //Can crete with constructor or square brackets
+    //Can create with constructor or square brackets
     const arr1 = Array() 
     //number in () will be size of empty array
     //can fill all elements with a single static value with .fill()
