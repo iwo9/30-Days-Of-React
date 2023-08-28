@@ -51,6 +51,7 @@ Can start with React in two ways:
             )
 
 
+            //Can only render one JSX element at a time, so use a parent jsx element as a container to hold all of the created elements or use an array
             //Parent JSX Element
             const app = (
                 <div>
@@ -61,6 +62,7 @@ Can start with React in two ways:
             )
 
             //Rendering using ReactDOM - render method takes arguments jsxElement and rootElement
+            //Can render like this through app, or directly with an array - ReactDOM.render([header, main, footer], rootElement) - will have less creative control though
             ReactDOM.render(app, rootElement)
         </script>
         
