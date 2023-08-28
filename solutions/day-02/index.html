@@ -1,0 +1,33 @@
+<!-- Only HTML file we will have in any react application
+React - Single Page application
+Can start with React in two ways:
+    1. CDN   - easier, starting with this
+    2. create-react-app - more complicated but preferred -->
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>30 Days Of React Challenge</title>
+    </head>
+
+    <body>
+        <div class="root"></div>
+        <!-- root div tag is gateway to connecting index.html to all react componenets -->
+
+        <!--importing react and react-dom using CDN (Content Delivery Network - allows for quick transfer of assets) -->
+        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+        <!--Transpiling jsx with babel library-->
+        <!--This will load the Babel library from a CDN and make it available on the page -->
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <!--Specifies that the code within this script tag should be transpiled with babel before execution -->
+        <script type="text/babel">
+            //testing if React is properly linked to index.html - should give an object in the browser console (successful)
+            console.log(React)
+        </script>
+        
+    </body>
+</html>
