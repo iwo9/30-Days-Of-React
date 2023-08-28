@@ -19,6 +19,7 @@ Can start with React in two ways:
         <!--importing react and react-dom using CDN (Content Delivery Network - allows for quick transfer of assets) -->
         <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
         <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <!--Little note - React-DOM has a render method which is very important-->
 
         <!--Transpiling jsx with babel library-->
         <!--This will load the Babel library from a CDN and make it available on the page -->
@@ -27,6 +28,40 @@ Can start with React in two ways:
         <script type="text/babel">
             //testing if React is properly linked to index.html - should give an object in the browser console (successful)
             console.log(React)
+
+            //Getting root element - only place where we directly interact with the DOM
+            const rootElement = document.querySelector('.root')
+
+            //JSX elements
+            const header = <h1>First JS Element</h1>
+            const main = (
+                <main>
+                    <p>Prerequisite to get started react.js:</p>
+                    <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    </ul>
+                </main>
+            )
+            const footer = (
+                <footer>
+                    <p>Copyright 2023</p>
+                </footer>
+            )
+
+
+            //Parent JSX Element
+            const app = (
+                <div>
+                    {header}
+                    {main}
+                    {footer}
+                </div>
+            )
+
+            //Rendering using ReactDOM - render method takes arguments jsxElement and rootElement
+            ReactDOM.render(app, rootElement)
         </script>
         
     </body>
