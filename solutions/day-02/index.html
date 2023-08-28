@@ -17,8 +17,8 @@ Can start with React in two ways:
         <!-- root div tag is gateway to connecting index.html to all react componenets -->
 
         <!--importing react and react-dom using CDN (Content Delivery Network - allows for quick transfer of assets) -->
-        <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
-        <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
         <!--Little note - React-DOM has a render method which is very important-->
 
         <!--Transpiling jsx with babel library-->
@@ -33,7 +33,11 @@ Can start with React in two ways:
             const rootElement = document.querySelector('.root')
 
             //JSX elements
-            const header = <h1>First JS Element</h1>
+            const header = (
+                <header style={{border: '2px solid orange', color: 'black', fontSize: '18px'}}>
+                    <h1>First JS Element</h1>
+                </header>
+            )
             const main = (
                 <main>
                     <p>Prerequisite to get started react.js:</p>
