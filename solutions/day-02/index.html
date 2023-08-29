@@ -32,14 +32,36 @@ Can start with React in two ways:
             //Getting root element - only place where we directly interact with the DOM
             const rootElement = document.querySelector('.root')
 
+            //Styles
+            const headerStyles = {
+                backgroundColor: 'grey',
+                fontFamily: 'Helvetica Neue',
+                padding: 25,
+                lineHeight: 1.5,
+                border: '8px solid orange'
+            }
+            const mainStyles = {
+                backgroundColor: '#F3F0F5',
+            }
+
+            const footerStyles = {
+                backgroundColor: '#F3F0F5'
+            }
+
+            
             //JSX elements
             const header = (
-                <header style={{border: '2px solid orange', color: 'black', fontSize: '18px'}}>
-                    <h1>First JS Element</h1>
+                <header style={headerStyles}>
+                    <div className='header-wrapper'>
+                        <h1>First JS Element</h1>
+                        <h2>Getting Started with React</h2>
+                        <h3>and hoping for no bugs</h3>
+                    </div>
                 </header>
             )
+
             const main = (
-                <main>
+                <main style={mainStyles}>
                     <p>Prerequisite to get started react.js:</p>
                     <ul>
                     <li>HTML</li>
@@ -49,7 +71,7 @@ Can start with React in two ways:
                 </main>
             )
             const footer = (
-                <footer>
+                <footer style={footerStyles}>
                     <p>Copyright 2023</p>
                 </footer>
             )
